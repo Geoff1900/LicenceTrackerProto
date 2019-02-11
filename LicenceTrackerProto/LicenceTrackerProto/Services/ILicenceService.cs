@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LicenceTrackerProto.Services
 {
-    interface ILicenceService
+    public interface ILicenceService
     {
         Task<IEnumerable<Licence>> GetLicencesAsync();
 
