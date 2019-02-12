@@ -7,9 +7,9 @@ namespace LicenceTrackerProto.Models
 {
     public class Licence
     {
+        public string User { get; set; }
         public Guid ID { get; set; }
         public string LicenceKey { get; set; }
 
-        public string User { get; set; }
     }
 }

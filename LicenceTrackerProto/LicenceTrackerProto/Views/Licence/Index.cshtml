@@ -1,9 +1,10 @@
 ﻿@model  LicenceViewModel
+@using  Microsoft.AspNetCore.Identity;
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>ViewData["Title"]</h2>
+<h2>Hello @User.Identity.Name</h2>
 
 <div class="panel panel-default LicencePanel">
     <div class="panel-heading">ViewData["Title"]</div>
