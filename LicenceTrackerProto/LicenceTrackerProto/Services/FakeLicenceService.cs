@@ -11,8 +11,8 @@ namespace LicenceTrackerProto.Services
     {
         public Task<IEnumerable<Licence>> GetLicencesAsync()
         {
-            var item1 = new Licence() { ID = new Guid(), User = "Geoff", LicenceKey = "VS_123" };
-            var item2 = new Licence() { ID = new Guid(), User = "Geoff", LicenceKey = "VS_123" };
+            var item1 = new Licence() { ID = Guid.NewGuid(), User = "Geoff", LicenceKey = "VS_123" };
+            var item2 = new Licence() { ID = Guid.NewGuid(), User = "Geoff", LicenceKey = "VS_123" };
             var items = new List<Licence>() { item1, item2 };
 
             /*  Need to explicitly specify <IEnumerable<Licence>> on the Task.FromResult 

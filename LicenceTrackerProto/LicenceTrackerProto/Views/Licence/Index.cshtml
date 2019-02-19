@@ -7,20 +7,22 @@
 <h2>Hello @User.Identity.Name</h2>
 
 <div class="panel panel-default LicencePanel">
-    <div class="panel-heading">ViewData["Title"]</div>
+    <div class="panel-heading">@ViewData["Title"]</div>
     <table class="table table-hover">
         <thead>
             <tr>
-                <td>User</td>
-                <td>Licence Key</td>
-        </tr>
+                <td class=" bg-primary">ID</td>
+                <td class=" bg-primary">User</td>
+                <td class=" bg-primary">Licence Key</td>
+            </tr>
         </thead>
         @foreach (var item in Model.items)
         {
-            <tr>
-                <td>@item.User</td>
-                <td>@item.LicenceKey</td>
-            </tr>
+        <tr>
+            <td> @item.ID</td>
+            <td> @item.User</td>
+            <td>@item.LicenceKey</td>
+        </tr>
         }
 
     </table>
