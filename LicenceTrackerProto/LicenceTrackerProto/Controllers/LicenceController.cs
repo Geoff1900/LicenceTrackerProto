@@ -25,5 +25,9 @@ namespace LicenceTrackerProto.Controllers
             //return Content("Hello from Licence Tracker");
             return View(licences);
         }
+        public  IActionResult Add()
+        {
+            return View();
+        }
     }
 }
