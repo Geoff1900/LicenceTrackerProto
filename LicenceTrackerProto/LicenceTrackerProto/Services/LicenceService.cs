@@ -19,5 +19,10 @@ namespace LicenceTrackerProto.Services
         {
             return await _applicationDbContext.items.ToListAsync();
         }
+
+        public async Task<bool> AddNewLicence(Licence licence)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

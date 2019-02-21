@@ -9,6 +9,8 @@ namespace LicenceTrackerProto.Services
 {
     public class FakeLicenceService : ILicenceService
     {
+
+
         public Task<IEnumerable<Licence>> GetLicencesAsync()
         {
             var item1 = new Licence() { ID = Guid.NewGuid(), User = "Geoff", LicenceKey = "VS_123" };
@@ -23,6 +25,10 @@ namespace LicenceTrackerProto.Services
              */
             return Task.FromResult<IEnumerable<Licence>>(items);
 
+        }
+        public Task<bool> AddNewLicence(Licence licence)
+        {
+            return Task.FromResult(true);
         }
     }
 }

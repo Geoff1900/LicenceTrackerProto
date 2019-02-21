@@ -10,6 +10,6 @@ namespace LicenceTrackerProto.Services
     {
         Task<IEnumerable<Licence>> GetLicencesAsync();
 
-
+        Task<bool> AddNewLicence(Licence licence);
     }
 }

@@ -1,7 +1,25 @@
-﻿
+﻿@model Licence
 @{
     ViewData["Title"] = "Add";
 }
 
 <h2>Add New Licence</h2>
+
+<div class="panel-footer input-group">
+    <form asp-action="add" method="POST">
+        <div class="form-group-lg">
+            <label asp-for="User">Add New User</label>
+            <input asp-for="User" />
+        </div>
+        <div class="form-group-lg">
+            <label asp-for="LicenceKey">Add New Licence</label>
+            <input asp-for="LicenceKey" />
+        </div>
+        <div class="form-group-lg">
+<input type="hidden" asp-for="ID"/>
+        </div>
+        <button type="submit">Add</button>
+    </form>
+
+</div> 
 

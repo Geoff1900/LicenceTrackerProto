@@ -25,9 +25,22 @@ namespace LicenceTrackerProto.Controllers
             //return Content("Hello from Licence Tracker");
             return View(licences);
         }
+        [HttpGet]
         public  IActionResult Add()
         {
-            return View();
+            Licence licence = new Licence() { ID = Guid.NewGuid() };
+                       return View(licence);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Add(Licence licence){
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var success = await _licenceService.AddNewLicence(licence);
+            return RedirectToAction("Index");
         }
     }
 }
